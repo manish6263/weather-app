@@ -1,0 +1,25 @@
+{
+  "name": "weather-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "proxy": "http://localhost:3000",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "Manish Patel",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
