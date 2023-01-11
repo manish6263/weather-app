@@ -13,7 +13,15 @@ const NotFound = () => {
                         </figure>
                         <p>Welcome to the World of Manish Patel</p>
                         <h1>Oops! page not found click here to go back</h1>
-                        <Link to="/"><button>Go Back</button></Link>
+                        <Link to="/">
+                                <button className="animated-button1">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Go Back
+                                </button>
+                            </Link>
                     </div>
                 </div>
 

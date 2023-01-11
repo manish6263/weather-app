@@ -17,7 +17,15 @@ const About = () => {
                     <div className="col-md-6 col-12 main_header_left">
                         <p>Welcome to The World of Manish Patel</p>
                         <h1>I am a <span className="txt_clr">Mern Stack Developer</span>, and a freelancer</h1>
-                        <Link to="/" target="_self"><button>About Me</button></Link>
+                        <Link to="/">
+                                <button className="animated-button1">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    About Me
+                                </button>
+                            </Link>
                     </div>
                 </div>
 

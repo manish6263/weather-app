@@ -83,7 +83,7 @@ body {
     outline: none;
 }
 
-#hamerburg:hover{
+#hamerburg:hover {
     animation: rot 1s linear infinite;
 }
 
@@ -585,9 +585,11 @@ footer p {
     animation: right 2s linear infinite;
     transition: all 0.3s linear;
 }
-.inp button:hover{
+
+.inp button:hover {
     animation: none;
 }
+
 @keyframes right {
     0% {
         -webkit-transform: translateX(-100%);
@@ -915,10 +917,12 @@ footer p {
         padding: 0;
     }
 }
-.card{
+
+.card {
     overflow: hidden;
 }
-.card-img-top:hover{
+
+.card-img-top:hover {
     transition: all 0.4s linear;
     transform: scale(1.1);
 }
