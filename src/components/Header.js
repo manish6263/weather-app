@@ -21,9 +21,9 @@ const Header = () => {
 
     const profileFunction = () => {
         setShowProfile(!showProfile);
-        // setTimeout(() => {
-        //     setShowProfile(false);
-        // }, 4000);
+        setTimeout(() => {
+            setShowProfile(false);
+        }, 4000);
     }
 
     const onClick = () => {
