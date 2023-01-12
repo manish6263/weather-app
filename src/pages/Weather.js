@@ -16,6 +16,7 @@ const Weather = () => {
   const onChange = (e) => {
     setCityName(e.target.value);
   }
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     submitForm(cityName);

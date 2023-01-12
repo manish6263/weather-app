@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { logout, reset } from "../features/auth/authSlice";
+import { useAuthStatus } from "../hooks/useAuthStatus";
 
 const Header = () => {
+    const { loggedIn } = useAuthStatus();
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.auth);
@@ -19,19 +21,19 @@ const Header = () => {
 
     const profileFunction = () => {
         setShowProfile(!showProfile);
-        setTimeout(() => {
-            setShowProfile(false);
-        }, 4000);
+        // setTimeout(() => {
+        //     setShowProfile(false);
+        // }, 4000);
     }
-    
-    const onClick = ()=>{
+
+    const onClick = () => {
         const hamerburg = document.getElementById('hamerburg');
         const xmark = document.getElementById('xmark');
-        if(hamerburg.classList.contains('d-none')){
+        if (hamerburg.classList.contains('d-none')) {
             hamerburg.classList.remove('d-none');
             xmark.classList.add('d-none');
         }
-        else{
+        else {
             xmark.classList.remove('d-none');
             hamerburg.classList.add('d-none');
         }
@@ -77,12 +79,12 @@ const Header = () => {
                                     )
                                 }
                                 <li className="nav-item nav-item-setting">
-                                    <i className="fa-solid p-2 fa-ellipsis-vertical" onClick={profileFunction}></i>
+                                    <i className={`fa-solid p-2 ${loggedIn ? 'fa-user-check' : 'fa-user'}`} onClick={profileFunction}></i>
                                 </li>
                             </ul>
                         </div>
                         <div className="profile-dots">
-                            <i className="fa-solid fa-ellipsis-vertical" onClick={profileFunction}></i>
+                            <i className={`fa-solid p-2 ${loggedIn ? 'fa-user-check' : 'fa-user'}`} onClick={profileFunction}></i>
                         </div>
                     </nav>
                     <div className={`profile ${!showProfile ? 'd-none' : ''}`}>
@@ -91,7 +93,7 @@ const Header = () => {
                                 ? <>
                                     <li>
                                         <Link className="nav-link profile-item" to="/register">
-                                            <i className="fa-solid fa-right-from-bracket text-info"></i>
+                                            <i className="fa-solid fa-user-plus text-info"></i>
                                             <p>
                                                 Register
                                             </p>
@@ -99,7 +101,7 @@ const Header = () => {
                                     </li>
                                     <li>
                                         <Link className="nav-link profile-item" to="/login">
-                                            <i className="fa-solid fa-right-from-bracket text-info"></i>
+                                            <i className="fa-regular fa-user text-info"></i>
                                             <p>
                                                 Login
                                             </p>
@@ -108,7 +110,7 @@ const Header = () => {
                                 </>
                                 : <>
                                     <li className="profile-item">
-                                        <i className="fa-regular fa-user text-info"></i>
+                                        <i className="fa-solid fa-user-tie text-info"></i>
                                         <p className="name">{user.name}</p>
                                     </li>
                                     <li className="profile-item">

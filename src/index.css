@@ -166,9 +166,9 @@ body {
     gap: 15px;
     transition: all 0.3s linear;
     cursor: pointer;
-    border-top: 1px solid var(--main-bg);
-    border-bottom: 1px solid var(--main-bg);
-    border-radius: 1px 12px;
+    /* border-top: 1px solid var(--main-bg); */
+    /* border-bottom: 1px solid var(--main-bg); */
+    /* border-radius: 1px 12px; */
 }
 
 @media only screen and (min-width: 992px) {
@@ -189,8 +189,8 @@ li {
 
 .profile-item:hover {
     background-color: #0e5470;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    /* border-top: 1px solid white; */
+    /* border-bottom: 1px solid white; */
     /* gap: 13px; */
 }
 
@@ -582,15 +582,15 @@ footer p {
 .inp button {
     position: relative;
     right: 30px;
-    animation: right 2s linear infinite;
+    /* animation: right 2s linear infinite; */
     transition: all 0.3s linear;
 }
 
-.inp button:hover {
-    animation: none;
-}
+/* .inp button:hover {
+    color: var(--main-color);
+} */
 
-@keyframes right {
+/* @keyframes right {
     0% {
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
@@ -600,7 +600,7 @@ footer p {
         -webkit-transform: translateX(70%);
         transform: translateX(70%);
     }
-}
+} */
 
 .inp #email {
     color: white;

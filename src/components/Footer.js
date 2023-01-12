@@ -1,6 +1,18 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Footer = () => {
+    const [email, setEmail] = useState('');
+
+    const onChange = (e) => setEmail(e.target.value);
+    
+    const onSubmit = (e) => {
+        e.preventDefault();
+        setEmail('');
+        toast.success('You subscribed successfully');
+    }
+
     return (
         <footer>
             <div className="main-footer">
@@ -9,8 +21,8 @@ const Footer = () => {
                         <div className="footer-section-top container">
                             <div className="subscribe">
                                 <h2>Subscribe Now</h2>
-                                <form className="inp">
-                                    <input type="email" name="Email" placeholder="Your Email" id="email" />
+                                <form className="inp" onSubmit={onSubmit}>
+                                    <input type="email" name="Email" placeholder="Your Email" id="email" value={email} onChange={onChange} />
                                     <button type="submit">
                                         <i className="fa-solid fa-arrow-right"></i>
                                     </button>
